@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import StateControlledAnimation from './state-controlled-animation.jsx';
+import StateControlledAnimation from './state-controlled-animation.js';
 function App() {
   return (
     <div className="App">
