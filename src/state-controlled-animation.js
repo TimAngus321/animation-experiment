@@ -1,5 +1,5 @@
 import React, { Component, useRef, useEffect } from "react";
-import { TimelineLite, CSSPlugin, gsap } from "gsap";
+import { TimelineLite, CSSPlugin, gsap, timeline } from "gsap";
 import { allOfMySkills } from './my-skills.js';
 
 const skillSetStyle = {
@@ -12,11 +12,20 @@ const skillSetStyle = {
     transformOrigin: '0px 0% 0',
   }
 
+  const tl = gsap.timeline();
+
 
 
 const StateControlledAnimation = () => {
     useEffect(() => {
-        gsap.to(".frontend", {y: '100%'});
+        gsap.to(".frontend", {y: '100%',
+        stagger: {
+            each: 0.7,
+            from: "random",
+            repeat: -1,
+          } 
+    
+    });
     })
 
     return (
