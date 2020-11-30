@@ -10,6 +10,9 @@ const skillSetStyle = {
   const individualSkillStyle = {
     transform: 'rotate(90deg)', 
     transformOrigin: '0px 0% 0',
+    margin: 0,
+    padding: 0,
+    height: '100vh',
   }
 
   const tl = gsap.timeline();
@@ -17,14 +20,18 @@ const skillSetStyle = {
 
 
 const StateControlledAnimation = () => {
+
     useEffect(() => {
-        gsap.to(".frontend", {y: '100%',
+        // gsap.from(".frontend",)
+        gsap.to(
+        ".animated-skills-container > div > p", 
+        {y: '100%',
         stagger: {
             each: 0.7,
             from: "random",
             repeat: -1,
-          } 
-    
+          }, 
+          duration: 4,
     });
     })
 
